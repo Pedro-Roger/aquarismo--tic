@@ -5,6 +5,8 @@ import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useCart } from "../../context/CartProvider";
+import toast from "react-hot-toast";
 
 export default function ProductsSection() {
   const products = [
@@ -19,7 +21,8 @@ export default function ProductsSection() {
       id: 2,
       name: "Tetra Neon",
       price: 8.99,
-      description: "Cardume de cores iridescentes que iluminam qualquer aquário.",
+      description:
+        "Cardume de cores iridescentes que iluminam qualquer aquário.",
       image: "🐠",
     },
     {
@@ -32,7 +35,7 @@ export default function ProductsSection() {
     {
       id: 4,
       name: "Filtro Externo",
-      price: 89.90,
+      price: 89.9,
       description: "Filtro eficiente para manter a água sempre limpa.",
       image: "🧊",
     },
@@ -46,7 +49,7 @@ export default function ProductsSection() {
     {
       id: 6,
       name: "Planta Artificial",
-      price: 14.50,
+      price: 14.5,
       description: "Decoração segura e realista para aquários.",
       image: "🌿",
     },
@@ -60,7 +63,7 @@ export default function ProductsSection() {
     {
       id: 8,
       name: "Aquário 40L",
-      price: 249.90,
+      price: 249.9,
       description: "Aquário de vidro temperado, ideal para iniciantes.",
       image: "🪟",
     },
@@ -74,11 +77,13 @@ export default function ProductsSection() {
     {
       id: 10,
       name: "Luminária LED",
-      price: 79.90,
+      price: 79.9,
       description: "Iluminação eficiente para realçar as cores do aquário.",
       image: "💡",
     },
   ];
+
+  const { addToCart } = useCart();
 
   return (
     <section className="mb-16">
@@ -133,6 +138,10 @@ export default function ProductsSection() {
                   R$ {product.price.toFixed(2)}
                 </div>
                 <button
+                  onClick={() => {
+                    addToCart({ ...product, id: String(product.id) });
+                    toast.success("Produto adicionado ao carrinho!");
+                  }}
                   className="
                     bg-gradient-to-r from-[#2196f3] to-[#00bcd4]
                     hover:from-[#1565c0] hover:to-[#0097a7]
