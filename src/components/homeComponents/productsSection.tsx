@@ -74,96 +74,48 @@ export default function ProductsSection() {
       description: "Peixe de fundo resistente e ótimo para limpeza.",
       image: "🦑",
     },
-    {
-      id: 10,
-      name: "Luminária LED",
-      price: 79.9,
-      description: "Iluminação eficiente para realçar as cores do aquário.",
-      image: "💡",
-    },
   ];
 
   const { addToCart } = useCart();
 
   return (
-    <section className="mb-16">
-      <div className="w-3/4 mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#006064] mb-8 text-center">
-          Produtos em Destaque
-        </h2>
-        <Swiper
-          modules={[Navigation, Pagination, A11y]}
-          spaceBetween={24}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className="!pb-10"
-        >
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <div
-                className="
-                  bg-white/80
-                  backdrop-blur-md
-                  rounded-3xl
-                  shadow-[0_8px_32px_0_rgba(0,180,216,0.12)]
-                  border border-cyan-100
-                  flex flex-col items-center
-                  w-full
-                  p-7
-                  transition-all
-                  duration-300
-                  hover:scale-105
-                  hover:shadow-xl
-                  hover:border-cyan-300
-                  group
-                  h-full
-                  min-h-[420px]
-                "
+    <section className="py-12 px-4">
+      <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">
+        Produtos em Destaque
+      </h2>
+      <Swiper
+        modules={[Navigation, Pagination, A11y]}
+        spaceBetween={24}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="w-full max-w-6xl mx-auto"
+        style={{ paddingBottom: "40px" }}
+      >
+        {products.map((product) => (
+          <SwiperSlide key={product.id} className="flex justify-center">
+            <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center w-full max-w-xs">
+              <span className="text-6xl mb-4">{product.image}</span>
+              <h3 className="text-xl font-bold mb-2 text-blue-800">{product.name}</h3>
+              <p className="text-gray-600 mb-4 text-center">{product.description}</p>
+              <span className="text-lg font-bold text-green-600 mb-4">R${product.price.toFixed(2)}</span>
+              <button
+                className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition"
+                onClick={() => {
+                  addToCart(product);
+                  toast.success("Produto adicionado ao carrinho!");
+                }}
               >
-                <div className="relative flex items-center justify-center w-24 h-24 mb-5 rounded-full bg-gradient-to-br from-cyan-100 to-cyan-200 shadow-md group-hover:from-cyan-200 group-hover:to-cyan-100 transition-all duration-300">
-                  <span className="text-6xl">{product.image}</span>
-                </div>
-                <h3 className="text-[#0077b6] text-xl font-semibold mb-2 text-center">
-                  {product.name}
-                </h3>
-                <p className="text-gray-600 text-[1rem] text-center mb-4 min-h-[48px]">
-                  {product.description}
-                </p>
-                <div className="font-bold text-[#006494] text-lg mb-4">
-                  R$ {product.price.toFixed(2)}
-                </div>
-                <button
-                  onClick={() => {
-                    addToCart({ ...product, id: String(product.id) });
-                    toast.success("Produto adicionado ao carrinho!");
-                  }}
-                  className="
-                    bg-gradient-to-r from-[#2196f3] to-[#00bcd4]
-                    hover:from-[#1565c0] hover:to-[#0097a7]
-                    text-white
-                    px-6 py-2
-                    rounded-full
-                    font-bold
-                    shadow
-                    transition-all
-                    duration-300
-                    mt-auto
-                    outline-none
-                    focus:ring-2 focus:ring-cyan-400
-                  "
-                >
-                  Adicionar ao Carrinho
-                </button>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 }
