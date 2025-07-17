@@ -11,7 +11,7 @@ import { useState } from "react";
 
 export default function SpeciesHeroSection() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedFish, setSelectedFish] = useState(null);
+  const [selectedFish, setSelectedFish] = useState<typeof fishData[0] | null>(null);
 
   return (
     <>

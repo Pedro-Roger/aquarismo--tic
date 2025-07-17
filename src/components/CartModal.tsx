@@ -7,7 +7,9 @@ interface CartModalProps {
   onClose: () => void;
 }
 
-function CheckoutModal({ open, onClose, total, items }: { open: boolean; onClose: () => void; total: number; items: any[] }) {
+type CartItem = { id: string; name: string; price: number; quantity: number };
+
+function CheckoutModal({ open, onClose, total, items }: { open: boolean; onClose: () => void; total: number; items: CartItem[] }) {
   const [form, setForm] = useState({
     nome: "",
     email: "",
@@ -60,7 +62,7 @@ function CheckoutModal({ open, onClose, total, items }: { open: boolean; onClose
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg mx-4 p-6 relative animate-fadeIn">
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg sm:max-w-md xs:max-w-[95vw] mx-2 p-2 sm:p-4 relative animate-fadeIn overflow-y-auto max-h-[95vh]">
         <button
           className="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold"
           onClick={onClose}
@@ -75,139 +77,175 @@ function CheckoutModal({ open, onClose, total, items }: { open: boolean; onClose
             <div className="text-gray-600">Obrigado por comprar conosco.</div>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <h2 className="text-2xl font-bold text-blue-800 mb-2 text-center">Checkout</h2>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <h2 className="text-3xl font-extrabold text-blue-700 mb-4 text-center tracking-tight">Finalizar Pedido</h2>
             {/* Resumo dos produtos */}
-            <div className="bg-cyan-50 border border-cyan-200 rounded p-3 mb-4">
-              <div className="font-semibold mb-2 text-cyan-800">Produtos:</div>
-              <ul className="text-sm text-gray-700 space-y-1">
+            <div className="bg-gradient-to-br from-cyan-100 via-white to-blue-50 border border-cyan-200 rounded-2xl p-4 mb-4 shadow-sm">
+              <div className="font-bold mb-2 text-cyan-900 text-lg flex items-center gap-2">
+                <span className="text-2xl">🛒</span> Resumo do Pedido
+              </div>
+              <ul className="text-base text-gray-700 space-y-1 divide-y divide-cyan-100">
                 {items.map((item) => (
-                  <li key={item.id} className="flex justify-between">
-                    <span>{item.name} x{item.quantity}</span>
-                    <span>R${(item.price * item.quantity).toFixed(2)}</span>
+                  <li key={item.id} className="flex justify-between py-1">
+                    <span>{item.name} <span className='text-xs text-cyan-700'>x{item.quantity}</span></span>
+                    <span className="font-semibold">R${(item.price * item.quantity).toFixed(2)}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="flex flex-col gap-2">
-              <input
-                type="text"
-                name="nome"
-                placeholder="Nome completo"
-                value={form.nome}
-                onChange={handleChange}
-                required
-                className="border rounded px-3 py-2"
-              />
-              {errors.nome && <span className="text-red-500 text-xs">{errors.nome}</span>}
-              <input
-                type="email"
-                name="email"
-                placeholder="E-mail"
-                value={form.email}
-                onChange={handleChange}
-                required
-                className="border rounded px-3 py-2"
-              />
-              {errors.email && <span className="text-red-500 text-xs">{errors.email}</span>}
-              <input
-                type="text"
-                name="cpf"
-                placeholder="CPF"
-                value={form.cpf}
-                onChange={handleChange}
-                required
-                className="border rounded px-3 py-2"
-              />
-              {errors.cpf && <span className="text-red-500 text-xs">{errors.cpf}</span>}
-              <input
-                type="text"
-                name="telefone"
-                placeholder="Telefone"
-                value={form.telefone}
-                onChange={handleChange}
-                required
-                className="border rounded px-3 py-2"
-              />
-              {errors.telefone && <span className="text-red-500 text-xs">{errors.telefone}</span>}
-              <input
-                type="text"
-                name="cep"
-                placeholder="CEP"
-                value={form.cep}
-                onChange={handleChange}
-                required
-                className="border rounded px-3 py-2"
-              />
-              {errors.cep && <span className="text-red-500 text-xs">{errors.cep}</span>}
-              <input
-                type="text"
-                name="endereco"
-                placeholder="Endereço completo"
-                value={form.endereco}
-                onChange={handleChange}
-                required
-                className="border rounded px-3 py-2"
-              />
-              {errors.endereco && <span className="text-red-500 text-xs">{errors.endereco}</span>}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="relative">
+                <input
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  placeholder=" "
+                  value={form.nome}
+                  onChange={handleChange}
+                  required
+                  className="peer border-2 border-cyan-200 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500 bg-white placeholder-transparent transition"
+                />
+                <label htmlFor="nome" className="absolute left-3 top-2 text-gray-500 text-sm pointer-events-none transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-4 peer-focus:text-xs peer-focus:text-blue-700 bg-white px-1">Nome completo</label>
+                {errors.nome && <span className="text-red-500 text-xs block mt-1">{errors.nome}</span>}
+              </div>
+              <div className="relative">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder=" "
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                  className="peer border-2 border-cyan-200 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500 bg-white placeholder-transparent transition"
+                />
+                <label htmlFor="email" className="absolute left-3 top-2 text-gray-500 text-sm pointer-events-none transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-4 peer-focus:text-xs peer-focus:text-blue-700 bg-white px-1">E-mail</label>
+                {errors.email && <span className="text-red-500 text-xs block mt-1">{errors.email}</span>}
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="cpf"
+                  id="cpf"
+                  placeholder=" "
+                  value={form.cpf}
+                  onChange={handleChange}
+                  required
+                  className="peer border-2 border-cyan-200 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500 bg-white placeholder-transparent transition"
+                />
+                <label htmlFor="cpf" className="absolute left-3 top-2 text-gray-500 text-sm pointer-events-none transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-4 peer-focus:text-xs peer-focus:text-blue-700 bg-white px-1">CPF</label>
+                {errors.cpf && <span className="text-red-500 text-xs block mt-1">{errors.cpf}</span>}
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="telefone"
+                  id="telefone"
+                  placeholder=" "
+                  value={form.telefone}
+                  onChange={handleChange}
+                  required
+                  className="peer border-2 border-cyan-200 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500 bg-white placeholder-transparent transition"
+                />
+                <label htmlFor="telefone" className="absolute left-3 top-2 text-gray-500 text-sm pointer-events-none transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-4 peer-focus:text-xs peer-focus:text-blue-700 bg-white px-1">Telefone</label>
+                {errors.telefone && <span className="text-red-500 text-xs block mt-1">{errors.telefone}</span>}
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="cep"
+                  id="cep"
+                  placeholder=" "
+                  value={form.cep}
+                  onChange={handleChange}
+                  required
+                  className="peer border-2 border-cyan-200 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500 bg-white placeholder-transparent transition"
+                />
+                <label htmlFor="cep" className="absolute left-3 top-2 text-gray-500 text-sm pointer-events-none transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-4 peer-focus:text-xs peer-focus:text-blue-700 bg-white px-1">CEP</label>
+                {errors.cep && <span className="text-red-500 text-xs block mt-1">{errors.cep}</span>}
+              </div>
+              <div className="relative sm:col-span-2">
+                <input
+                  type="text"
+                  name="endereco"
+                  id="endereco"
+                  placeholder=" "
+                  value={form.endereco}
+                  onChange={handleChange}
+                  required
+                  className="peer border-2 border-cyan-200 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500 bg-white placeholder-transparent transition"
+                />
+                <label htmlFor="endereco" className="absolute left-3 top-2 text-gray-500 text-sm pointer-events-none transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-4 peer-focus:text-xs peer-focus:text-blue-700 bg-white px-1">Endereço completo</label>
+                {errors.endereco && <span className="text-red-500 text-xs block mt-1">{errors.endereco}</span>}
+              </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <label className="font-semibold">Forma de pagamento:</label>
+            <div className="flex flex-col gap-2 mt-2">
+              <label className="font-semibold text-cyan-800">Forma de pagamento</label>
               <select
                 name="pagamento"
                 value={form.pagamento}
                 onChange={handleChange}
-                className="border rounded px-3 py-2"
+                className="border-2 border-cyan-200 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500 bg-white transition"
               >
                 <option value="cartao">Cartão de Crédito</option>
                 <option value="boleto">Boleto Bancário</option>
               </select>
             </div>
             {form.pagamento === "cartao" ? (
-              <div className="flex flex-col gap-2">
-                <input
-                  type="text"
-                  name="numero"
-                  placeholder="Número do cartão"
-                  value={form.numero}
-                  onChange={handleChange}
-                  required
-                  className="border rounded px-3 py-2"
-                />
-                {errors.numero && <span className="text-red-500 text-xs">{errors.numero}</span>}
-                <div className="flex gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                <div className="relative sm:col-span-2">
+                  <input
+                    type="text"
+                    name="numero"
+                    id="numero"
+                    placeholder=" "
+                    value={form.numero}
+                    onChange={handleChange}
+                    required
+                    className="peer border-2 border-cyan-200 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500 bg-white placeholder-transparent transition"
+                  />
+                  <label htmlFor="numero" className="absolute left-3 top-2 text-gray-500 text-sm pointer-events-none transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-4 peer-focus:text-xs peer-focus:text-blue-700 bg-white px-1">Número do cartão</label>
+                  {errors.numero && <span className="text-red-500 text-xs block mt-1">{errors.numero}</span>}
+                </div>
+                <div className="relative">
                   <input
                     type="text"
                     name="validade"
-                    placeholder="Validade (MM/AA)"
+                    id="validade"
+                    placeholder=" "
                     value={form.validade}
                     onChange={handleChange}
                     required
-                    className="border rounded px-3 py-2 w-1/2"
+                    className="peer border-2 border-cyan-200 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500 bg-white placeholder-transparent transition"
                   />
+                  <label htmlFor="validade" className="absolute left-3 top-2 text-gray-500 text-sm pointer-events-none transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-4 peer-focus:text-xs peer-focus:text-blue-700 bg-white px-1">Validade</label>
+                  {errors.validade && <span className="text-red-500 text-xs block mt-1">{errors.validade}</span>}
+                </div>
+                <div className="relative">
                   <input
                     type="text"
                     name="cvv"
-                    placeholder="CVV"
+                    id="cvv"
+                    placeholder=" "
                     value={form.cvv}
                     onChange={handleChange}
                     required
-                    className="border rounded px-3 py-2 w-1/2"
+                    className="peer border-2 border-cyan-200 rounded-lg px-3 py-2 w-full focus:outline-none focus:border-blue-500 bg-white placeholder-transparent transition"
                   />
+                  <label htmlFor="cvv" className="absolute left-3 top-2 text-gray-500 text-sm pointer-events-none transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-4 peer-focus:text-xs peer-focus:text-blue-700 bg-white px-1">CVV</label>
+                  {errors.cvv && <span className="text-red-500 text-xs block mt-1">{errors.cvv}</span>}
                 </div>
-                {errors.validade && <span className="text-red-500 text-xs">{errors.validade}</span>}
-                {errors.cvv && <span className="text-red-500 text-xs">{errors.cvv}</span>}
               </div>
             ) : (
-              <div className="bg-cyan-50 border border-cyan-200 rounded p-3 text-center text-cyan-800">
+              <div className="bg-cyan-50 border border-cyan-200 rounded p-3 text-center text-cyan-800 mt-2">
                 O boleto será gerado após finalizar a compra.
               </div>
             )}
-            <div className="flex justify-between items-center mt-4">
-              <span className="font-bold text-lg">Total: R$ {total.toFixed(2)}</span>
+            <div className="flex justify-between items-center mt-6">
+              <span className="font-bold text-xl text-blue-900">Total: R$ {total.toFixed(2)}</span>
               <button
                 type="submit"
-                className="bg-green-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-600 transition"
+                className="bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:from-green-600 hover:to-cyan-600 transition text-lg"
               >
                 Finalizar Pedido
               </button>

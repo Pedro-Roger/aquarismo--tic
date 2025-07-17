@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react";
+import Image from "next/image";
 
 interface SpeciesDetailsProps {
   species: {
@@ -40,10 +41,12 @@ export default function SpeciesDetails({ species, isOpen, onClose }: SpeciesDeta
           <div className="p-8">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-shrink-0">
-                <img
+                <Image
                   src={species.image}
                   alt={species.name}
                   className="w-48 h-48 object-cover rounded-2xl shadow-lg"
+                  width={192}
+                  height={192}
                 />
               </div>
               

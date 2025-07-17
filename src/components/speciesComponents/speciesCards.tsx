@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useCart } from "../../context/CartProvider";
 import toast from "react-hot-toast";
 import SpeciesDetails from "./speciesDetails";
+import Image from "next/image";
 
 interface SpeciesCardProps {
   species: {
@@ -38,10 +39,12 @@ export default function SpeciesCard({ species, onShowDetails }: SpeciesCardProps
         }}
       >
         <div className="w-full flex justify-center items-center bg-gradient-to-t from-cyan-200 via-blue-100 to-white">
-          <img
+          <Image
             src={species.image}
             alt={species.name}
             className="w-40 h-40 object-cover rounded-full shadow-lg mt-6 border-4 border-white"
+            width={160}
+            height={160}
           />
         </div>
         <div className="p-6 flex-1 flex flex-col justify-between items-center w-full">
