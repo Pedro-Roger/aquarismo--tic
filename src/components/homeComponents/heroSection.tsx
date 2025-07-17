@@ -39,8 +39,7 @@ export default function HeroSection() {
                         duration-300 
                         hover:bg-teal-800 
                         hover:-translate-y-0.5 
-                        hover:shadow-lg
-                    "
+                        hover:shadow-lg"
         >
           Explore Espécies 🐠
         </a>
