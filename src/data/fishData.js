@@ -3,18 +3,20 @@ const fishData = [
     id: "molly-0",
     name: "Molly",
     scientificName: "Poecilia sphenops",
-    image: "https://example.com/fish/molly.jpg",
+    image:
+      "https://riverparkaquatics.co.uk/wp-content/uploads/2020/05/Assorted-Molly-Poecilia-sphenops.jpg",
     minTankSize: 15,
     temperament: "Calmo",
     diet: "Carnívoro",
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Eum nulla expedita quia quidem facilis consequatur sint adipisci consequatur placeat recusandae sapiente ipsa debitis illo nulla ex itaque cumque quos accusantium.",
+    description:
+      "Eum nulla expedita quia quidem facilis consequatur sint adipisci consequatur placeat recusandae sapiente ipsa debitis illo nulla ex itaque cumque quos accusantium.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 29.90
+    price: 29.9,
   },
   {
     id: "discus-1",
@@ -27,11 +29,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Perspiciatis laboriosam esse dolorum suscipit provident accusamus voluptatum illum distinctio voluptatibus culpa quis minima nihil animi nulla nesciunt blanditiis nostrum quos hic ullam eligendi repudiandae mollitia repellendus.",
+    description:
+      "Perspiciatis laboriosam esse dolorum suscipit provident accusamus voluptatum illum distinctio voluptatibus culpa quis minima nihil animi nulla nesciunt blanditiis nostrum quos hic ullam eligendi repudiandae mollitia repellendus.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 59.90
+    price: 59.9,
   },
   {
     id: "swordtail-2",
@@ -44,11 +47,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Veniam non mollitia facere a officiis recusandae facere quia voluptatibus eaque eum ullam facilis dolore quasi facilis.",
+    description:
+      "Veniam non mollitia facere a officiis recusandae facere quia voluptatibus eaque eum ullam facilis dolore quasi facilis.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 24.90
+    price: 24.9,
   },
   {
     id: "swordtail-3",
@@ -61,11 +65,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Perferendis beatae aut facilis dignissimos sapiente incidunt excepturi qui hic beatae esse veritatis eveniet hic aliquid sequi natus placeat cumque ipsam tempora magnam quia excepturi perferendis minima.",
+    description:
+      "Perferendis beatae aut facilis dignissimos sapiente incidunt excepturi qui hic beatae esse veritatis eveniet hic aliquid sequi natus placeat cumque ipsam tempora magnam quia excepturi perferendis minima.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 24.90
+    price: 24.9,
   },
   {
     id: "zebra-danio-4",
@@ -78,11 +83,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Esse quia enim praesentium nobis facilis expedita voluptatum dolores expedita blanditiis ipsa fuga placeat cumque.",
+    description:
+      "Esse quia enim praesentium nobis facilis expedita voluptatum dolores expedita blanditiis ipsa fuga placeat cumque.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 12.90
+    price: 12.9,
   },
   {
     id: "discus-5",
@@ -95,11 +101,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Fugiat ratione nihil dolores possimus necessitatibus voluptates distinctio beatae possimus dolore distinctio praesentium doloremque occaecati fugiat consequatur cumque facere et.",
+    description:
+      "Fugiat ratione nihil dolores possimus necessitatibus voluptates distinctio beatae possimus dolore distinctio praesentium doloremque occaecati fugiat consequatur cumque facere et.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 59.90
+    price: 59.9,
   },
   {
     id: "goldfish-6",
@@ -112,11 +119,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Aliquam nulla numquam at quos nesciunt consequuntur id a culpa similique laudantium qui unde incidunt laborum.",
+    description:
+      "Aliquam nulla numquam at quos nesciunt consequuntur id a culpa similique laudantium qui unde incidunt laborum.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 19.90
+    price: 19.9,
   },
   {
     id: "platy-7",
@@ -129,11 +137,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Sit est reprehenderit similique qui incidunt aspernatur quisquam vel sed nihil a deleniti.",
+    description:
+      "Sit est reprehenderit similique qui incidunt aspernatur quisquam vel sed nihil a deleniti.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 14.90
+    price: 14.9,
   },
   {
     id: "molly-8",
@@ -146,11 +155,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Saepe distinctio ipsum totam corporis dolor magnam libero praesentium debitis aspernatur quod at occaecati a deleniti quo enim possimus.",
+    description:
+      "Saepe distinctio ipsum totam corporis dolor magnam libero praesentium debitis aspernatur quod at occaecati a deleniti quo enim possimus.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 29.90
+    price: 29.9,
   },
   {
     id: "swordtail-9",
@@ -163,11 +173,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Esse perspiciatis blanditiis est reprehenderit nam porro deserunt dolore cum temporibus porro numquam.",
+    description:
+      "Esse perspiciatis blanditiis est reprehenderit nam porro deserunt dolore cum temporibus porro numquam.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 24.90
+    price: 24.9,
   },
   {
     id: "harlequin-rasbora-10",
@@ -180,11 +191,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Eaque eveniet explicabo dignissimos maxime quos quia consequatur inventore fugiat autem voluptas commodi id nostrum molestiae cumque voluptatum inventore tempore.",
+    description:
+      "Eaque eveniet explicabo dignissimos maxime quos quia consequatur inventore fugiat autem voluptas commodi id nostrum molestiae cumque voluptatum inventore tempore.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 16.90
+    price: 16.9,
   },
   {
     id: "platy-11",
@@ -197,11 +209,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Eius dignissimos reprehenderit iusto dolorem nemo deleniti corrupti dolor minima quaerat veritatis et nisi laboriosam alias.",
+    description:
+      "Eius dignissimos reprehenderit iusto dolorem nemo deleniti corrupti dolor minima quaerat veritatis et nisi laboriosam alias.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 14.90
+    price: 14.9,
   },
   {
     id: "swordtail-12",
@@ -214,11 +227,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Aut dolorum in mollitia deserunt distinctio illo cumque sit ad pariatur voluptatem quia blanditiis voluptate temporibus excepturi quam maiores corporis nobis saepe.",
+    description:
+      "Aut dolorum in mollitia deserunt distinctio illo cumque sit ad pariatur voluptatem quia blanditiis voluptate temporibus excepturi quam maiores corporis nobis saepe.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 24.90
+    price: 24.9,
   },
   {
     id: "zebra-danio-13",
@@ -231,11 +245,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Commodi cum quibusdam necessitatibus corrupti delectus dolorum assumenda delectus provident minima odio deleniti odit suscipit.",
+    description:
+      "Commodi cum quibusdam necessitatibus corrupti delectus dolorum assumenda delectus provident minima odio deleniti odit suscipit.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 12.90
+    price: 12.9,
   },
   {
     id: "cherry-barb-14",
@@ -248,11 +263,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Autem id dolorem corrupti quia non beatae magnam dolores pariatur omnis suscipit blanditiis unde hic dicta velit corporis.",
+    description:
+      "Autem id dolorem corrupti quia non beatae magnam dolores pariatur omnis suscipit blanditiis unde hic dicta velit corporis.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 13.90
+    price: 13.9,
   },
   {
     id: "rainbowfish-15",
@@ -265,11 +281,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Necessitatibus deserunt sint reprehenderit maxime quod laborum quasi placeat alias quo quaerat ducimus nostrum vel.",
+    description:
+      "Necessitatibus deserunt sint reprehenderit maxime quod laborum quasi placeat alias quo quaerat ducimus nostrum vel.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 34.90
+    price: 34.9,
   },
   {
     id: "goldfish-16",
@@ -282,11 +299,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Impedit libero excepturi magni numquam veritatis cupiditate debitis fugit expedita ratione eveniet quas delectus dolorum veritatis.",
+    description:
+      "Impedit libero excepturi magni numquam veritatis cupiditate debitis fugit expedita ratione eveniet quas delectus dolorum veritatis.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 19.90
+    price: 19.9,
   },
   {
     id: "harlequin-rasbora-17",
@@ -299,11 +317,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Incidunt labore vero earum fugit laborum eum voluptate deserunt tempora rem quos iste.",
+    description:
+      "Incidunt labore vero earum fugit laborum eum voluptate deserunt tempora rem quos iste.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 16.90
+    price: 16.9,
   },
   {
     id: "angelfish-18",
@@ -316,11 +335,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Sapiente modi tempora beatae ullam aliquid vel adipisci consequuntur iste dolorum tempora optio quos distinctio voluptatum voluptatem commodi atque impedit exercitationem unde officiis.",
+    description:
+      "Sapiente modi tempora beatae ullam aliquid vel adipisci consequuntur iste dolorum tempora optio quos distinctio voluptatum voluptatem commodi atque impedit exercitationem unde officiis.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 39.90
+    price: 39.9,
   },
   {
     id: "zebra-danio-19",
@@ -333,11 +353,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Et commodi delectus placeat suscipit mollitia quasi delectus unde deleniti debitis maxime distinctio porro nostrum consectetur dicta asperiores eos fugiat distinctio.",
+    description:
+      "Et commodi delectus placeat suscipit mollitia quasi delectus unde deleniti debitis maxime distinctio porro nostrum consectetur dicta asperiores eos fugiat distinctio.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 12.90
+    price: 12.9,
   },
   {
     id: "harlequin-rasbora-20",
@@ -350,11 +371,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Fugiat veniam fugiat atque soluta tempore dolores minima sunt occaecati dignissimos omnis quas inventore animi quis.",
+    description:
+      "Fugiat veniam fugiat atque soluta tempore dolores minima sunt occaecati dignissimos omnis quas inventore animi quis.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 16.90
+    price: 16.9,
   },
   {
     id: "angelfish-21",
@@ -367,11 +389,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Iusto ipsum placeat labore maxime fugit numquam nulla voluptatum facilis ipsa eveniet modi dolorum eligendi eum.",
+    description:
+      "Iusto ipsum placeat labore maxime fugit numquam nulla voluptatum facilis ipsa eveniet modi dolorum eligendi eum.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 39.90
+    price: 39.9,
   },
   {
     id: "goldfish-22",
@@ -384,11 +407,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Dolorum ea dolore consequatur odit voluptatibus quis impedit dicta odio alias impedit quas eaque eveniet dolore minima porro exercitationem quo totam molestiae harum.",
+    description:
+      "Dolorum ea dolore consequatur odit voluptatibus quis impedit dicta odio alias impedit quas eaque eveniet dolore minima porro exercitationem quo totam molestiae harum.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 19.90
+    price: 19.9,
   },
   {
     id: "discus-23",
@@ -401,11 +425,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Illum necessitatibus rerum velit inventore eligendi incidunt delectus veritatis voluptatum voluptatem pariatur molestias voluptate.",
+    description:
+      "Illum necessitatibus rerum velit inventore eligendi incidunt delectus veritatis voluptatum voluptatem pariatur molestias voluptate.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 59.90
+    price: 59.9,
   },
   {
     id: "swordtail-24",
@@ -418,11 +443,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Molestiae natus ex quae eveniet eos maxime neque amet a alias iste dicta vel nam occaecati aspernatur placeat perspiciatis totam aut maxime doloribus ipsum in.",
+    description:
+      "Molestiae natus ex quae eveniet eos maxime neque amet a alias iste dicta vel nam occaecati aspernatur placeat perspiciatis totam aut maxime doloribus ipsum in.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 24.90
+    price: 24.9,
   },
   {
     id: "rainbowfish-25",
@@ -435,11 +461,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Velit eveniet rem accusamus id pariatur veritatis neque id laboriosam nam aperiam mollitia fugit consectetur praesentium ullam iusto.",
+    description:
+      "Velit eveniet rem accusamus id pariatur veritatis neque id laboriosam nam aperiam mollitia fugit consectetur praesentium ullam iusto.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 34.90
+    price: 34.9,
   },
   {
     id: "zebra-danio-26",
@@ -452,11 +479,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Possimus sed saepe deleniti officiis error quos excepturi aperiam nostrum labore ratione impedit nobis recusandae ducimus voluptates assumenda officia voluptatibus minima repellat itaque accusamus repudiandae voluptates.",
+    description:
+      "Possimus sed saepe deleniti officiis error quos excepturi aperiam nostrum labore ratione impedit nobis recusandae ducimus voluptates assumenda officia voluptatibus minima repellat itaque accusamus repudiandae voluptates.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 12.90
+    price: 12.9,
   },
   {
     id: "swordtail-27",
@@ -469,11 +497,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Quidem eaque reiciendis quaerat nostrum sint corporis inventore illum suscipit odio illum officiis blanditiis corporis exercitationem sit explicabo.",
+    description:
+      "Quidem eaque reiciendis quaerat nostrum sint corporis inventore illum suscipit odio illum officiis blanditiis corporis exercitationem sit explicabo.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 24.90
+    price: 24.9,
   },
   {
     id: "cherry-barb-28",
@@ -486,11 +515,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Dolorum ipsam nihil non laboriosam fugiat et voluptas molestias quae nam commodi nesciunt quasi distinctio veniam minima ad voluptas.",
+    description:
+      "Dolorum ipsam nihil non laboriosam fugiat et voluptas molestias quae nam commodi nesciunt quasi distinctio veniam minima ad voluptas.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 13.90
+    price: 13.9,
   },
   {
     id: "goldfish-29",
@@ -503,11 +533,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Distinctio quae optio facere repellat dolore modi dolore vitae quibusdam at dolorum ut voluptatum porro.",
+    description:
+      "Distinctio quae optio facere repellat dolore modi dolore vitae quibusdam at dolorum ut voluptatum porro.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 19.90
+    price: 19.9,
   },
   {
     id: "molly-30",
@@ -520,11 +551,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Dolorum magni fugit molestias omnis eius dicta blanditiis eius dolorum laboriosam accusamus rem quisquam.",
+    description:
+      "Dolorum magni fugit molestias omnis eius dicta blanditiis eius dolorum laboriosam accusamus rem quisquam.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 29.90
+    price: 29.9,
   },
   {
     id: "molly-31",
@@ -537,11 +569,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Vitae ut consequuntur veniam quidem nobis iusto temporibus eum facere necessitatibus corrupti ea accusamus itaque nesciunt molestias reprehenderit occaecati perspiciatis voluptatum cumque beatae iusto distinctio.",
+    description:
+      "Vitae ut consequuntur veniam quidem nobis iusto temporibus eum facere necessitatibus corrupti ea accusamus itaque nesciunt molestias reprehenderit occaecati perspiciatis voluptatum cumque beatae iusto distinctio.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 29.90
+    price: 29.9,
   },
   {
     id: "angelfish-32",
@@ -554,11 +587,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Omnis nostrum libero accusamus incidunt totam consectetur ipsa eum et repellat esse autem earum quis nihil exercitationem.",
+    description:
+      "Omnis nostrum libero accusamus incidunt totam consectetur ipsa eum et repellat esse autem earum quis nihil exercitationem.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 39.90
+    price: 39.9,
   },
   {
     id: "harlequin-rasbora-33",
@@ -571,11 +605,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Asperiores fuga illo excepturi at impedit recusandae explicabo deleniti minus dolores similique cupiditate.",
+    description:
+      "Asperiores fuga illo excepturi at impedit recusandae explicabo deleniti minus dolores similique cupiditate.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 16.90
+    price: 16.9,
   },
   {
     id: "discus-34",
@@ -588,11 +623,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Reiciendis officiis modi dolor ratione molestias iusto ipsum unde at reiciendis est perspiciatis magnam sapiente alias ducimus occaecati nihil dolore rem eius sint pariatur hic quos modi.",
+    description:
+      "Reiciendis officiis modi dolor ratione molestias iusto ipsum unde at reiciendis est perspiciatis magnam sapiente alias ducimus occaecati nihil dolore rem eius sint pariatur hic quos modi.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 59.90
+    price: 59.9,
   },
   {
     id: "discus-35",
@@ -605,11 +641,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Maxime laboriosam laudantium fugiat atque iste deserunt placeat quidem exercitationem modi odio doloremque a quas sunt placeat doloremque dicta et odio amet itaque.",
+    description:
+      "Maxime laboriosam laudantium fugiat atque iste deserunt placeat quidem exercitationem modi odio doloremque a quas sunt placeat doloremque dicta et odio amet itaque.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 59.90
+    price: 59.9,
   },
   {
     id: "discus-36",
@@ -622,11 +659,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Recusandae aliquid possimus quis dolor facilis officiis non distinctio magni aliquid vitae omnis illo recusandae provident corrupti temporibus velit earum debitis.",
+    description:
+      "Recusandae aliquid possimus quis dolor facilis officiis non distinctio magni aliquid vitae omnis illo recusandae provident corrupti temporibus velit earum debitis.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 59.90
+    price: 59.9,
   },
   {
     id: "zebra-danio-37",
@@ -639,11 +677,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Omnis explicabo perspiciatis ex dolorum voluptates veritatis explicabo eaque minima saepe eaque nulla atque unde at enim nulla quae officiis delectus ex molestiae deleniti.",
+    description:
+      "Omnis explicabo perspiciatis ex dolorum voluptates veritatis explicabo eaque minima saepe eaque nulla atque unde at enim nulla quae officiis delectus ex molestiae deleniti.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 12.90
+    price: 12.9,
   },
   {
     id: "harlequin-rasbora-38",
@@ -656,11 +695,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Aliquam velit fuga distinctio occaecati quaerat ducimus aperiam delectus ex eaque voluptatibus pariatur similique nemo quos eum modi mollitia officia harum enim dolores.",
+    description:
+      "Aliquam velit fuga distinctio occaecati quaerat ducimus aperiam delectus ex eaque voluptatibus pariatur similique nemo quos eum modi mollitia officia harum enim dolores.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 16.90
+    price: 16.9,
   },
   {
     id: "rainbowfish-39",
@@ -673,11 +713,12 @@ const fishData = [
     waterParameters: {
       ph: "6.5-7.5",
       temp: "24-28°C",
-      gh: "5-12"
+      gh: "5-12",
     },
-    description: "Inventore totam sit neque facere fugiat occaecati aperiam deserunt qui unde amet eligendi.",
+    description:
+      "Inventore totam sit neque facere fugiat occaecati aperiam deserunt qui unde amet eligendi.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 34.90
+    price: 34.9,
   },
   {
     id: "angelfish-40",
@@ -690,11 +731,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Consequatur magni corrupti a quia dignissimos ullam quos autem culpa repudiandae quidem repudiandae quod doloribus repellat voluptatibus.",
+    description:
+      "Consequatur magni corrupti a quia dignissimos ullam quos autem culpa repudiandae quidem repudiandae quod doloribus repellat voluptatibus.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 39.90
+    price: 39.9,
   },
   {
     id: "platy-41",
@@ -707,11 +749,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Suscipit fuga est reprehenderit totam quia dignissimos velit ipsam explicabo animi sed totam laudantium velit dolores eum velit ex nisi mollitia culpa recusandae earum dolor.",
+    description:
+      "Suscipit fuga est reprehenderit totam quia dignissimos velit ipsam explicabo animi sed totam laudantium velit dolores eum velit ex nisi mollitia culpa recusandae earum dolor.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 14.90
+    price: 14.9,
   },
   {
     id: "rainbowfish-42",
@@ -724,11 +767,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Alias iste voluptate eaque magnam perspiciatis magnam corrupti tempora facere accusamus nihil soluta nihil laborum doloremque excepturi.",
+    description:
+      "Alias iste voluptate eaque magnam perspiciatis magnam corrupti tempora facere accusamus nihil soluta nihil laborum doloremque excepturi.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 34.90
+    price: 34.9,
   },
   {
     id: "goldfish-43",
@@ -741,11 +785,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Reprehenderit cumque dolorum quia vero neque error qui id totam odio molestiae debitis nemo non aspernatur maiores esse deleniti expedita corrupti incidunt sequi quas.",
+    description:
+      "Reprehenderit cumque dolorum quia vero neque error qui id totam odio molestiae debitis nemo non aspernatur maiores esse deleniti expedita corrupti incidunt sequi quas.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 19.90
+    price: 19.9,
   },
   {
     id: "molly-44",
@@ -758,11 +803,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Omnis magni aspernatur labore pariatur dolores deleniti dolore asperiores laborum optio eius mollitia quo ipsum omnis mollitia molestiae ea omnis molestias doloremque.",
+    description:
+      "Omnis magni aspernatur labore pariatur dolores deleniti dolore asperiores laborum optio eius mollitia quo ipsum omnis mollitia molestiae ea omnis molestias doloremque.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 29.90
+    price: 29.9,
   },
   {
     id: "swordtail-45",
@@ -775,11 +821,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Soluta ipsam perspiciatis voluptatibus accusamus harum iure illo ullam in eum blanditiis hic.",
+    description:
+      "Soluta ipsam perspiciatis voluptatibus accusamus harum iure illo ullam in eum blanditiis hic.",
     compatibleTankmates: ["Nenhum", "Corydoras (com cautela)", "Tetra"],
-    price: 24.90
+    price: 24.9,
   },
   {
     id: "discus-46",
@@ -792,11 +839,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Et architecto ad praesentium soluta maiores recusandae amet rerum fugit consequuntur fugit modi fugiat ut tempore placeat dignissimos aspernatur repellendus dicta quos aliquid odit ipsa vitae atque.",
+    description:
+      "Et architecto ad praesentium soluta maiores recusandae amet rerum fugit consequuntur fugit modi fugiat ut tempore placeat dignissimos aspernatur repellendus dicta quos aliquid odit ipsa vitae atque.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 59.90
+    price: 59.9,
   },
   {
     id: "swordtail-47",
@@ -809,11 +857,12 @@ const fishData = [
     waterParameters: {
       ph: "6.0-7.0",
       temp: "20-26°C",
-      gh: "1-5"
+      gh: "1-5",
     },
-    description: "Dicta incidunt dolorem dignissimos dolores quos animi necessitatibus nihil sed a sapiente dignissimos omnis reiciendis.",
+    description:
+      "Dicta incidunt dolorem dignissimos dolores quos animi necessitatibus nihil sed a sapiente dignissimos omnis reiciendis.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 24.90
+    price: 24.9,
   },
   {
     id: "goldfish-48",
@@ -826,11 +875,12 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Officia rem eveniet tenetur dolores autem accusantium voluptatem beatae voluptatem sint sequi laudantium praesentium nobis modi sapiente eius veritatis.",
+    description:
+      "Officia rem eveniet tenetur dolores autem accusantium voluptatem beatae voluptatem sint sequi laudantium praesentium nobis modi sapiente eius veritatis.",
     compatibleTankmates: ["Guppy", "Neon Tetra", "Corydoras"],
-    price: 19.90
+    price: 19.9,
   },
   {
     id: "discus-49",
@@ -843,12 +893,13 @@ const fishData = [
     waterParameters: {
       ph: "7.0-8.0",
       temp: "22-30°C",
-      gh: "4-10"
+      gh: "4-10",
     },
-    description: "Culpa illum sequi unde aliquam in temporibus quis vero iusto dolores quis quidem nostrum sequi labore dolorem molestiae recusandae amet dolor.",
+    description:
+      "Culpa illum sequi unde aliquam in temporibus quis vero iusto dolores quis quidem nostrum sequi labore dolorem molestiae recusandae amet dolor.",
     compatibleTankmates: ["Platy", "Molly", "Zebra Danio"],
-    price: 59.90
-  }
+    price: 59.9,
+  },
 ];
 
 export default fishData;

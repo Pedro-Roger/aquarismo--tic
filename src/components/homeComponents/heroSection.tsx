@@ -1,9 +1,9 @@
 "use client";
 export default function HeroSection() {
-    return (
-        <section className="pt-8">
-            <div
-                className="
+  return (
+    <section className="pt-8">
+      <div
+        className="
                     text-center 
                     px-5 
                     py-10 
@@ -16,16 +16,17 @@ export default function HeroSection() {
                     max-w-[1200px] 
                     mx-auto
                 "
-            >
-                <h2 className="text-center my-10 mb-7 text-[#006064] text-[2.2rem] font-bold">
-                    Seu Guia Definitivo para o Mundo Aquático
-                </h2>
-                <p className="text-[1.1rem] text-[#00838f] max-w-[700px] mx-auto mb-6">
-                    Descubra a beleza e a complexidade do aquarismo. Compre peixes e acessórios ou encontre informações detalhadas sobre cuidados.
-                </p>
-                <a
-                    href="/especies"
-                    className="
+      >
+        <h2 className="text-center my-10 mb-7 text-[#006064] text-[2.2rem] font-bold">
+          Sua loja definitiva para o Mundo Aquático
+        </h2>
+        <p className="text-[1.1rem] text-[#00838f] max-w-[700px] mx-auto mb-6">
+          Descubra a beleza e a complexidade do aquarismo. Compre peixes e
+          acessórios ou encontre informações detalhadas sobre cuidados.
+        </p>
+        <a
+          href="/especies"
+          className="
                         inline-block 
                         px-8 
                         py-3 
@@ -40,10 +41,10 @@ export default function HeroSection() {
                         hover:-translate-y-0.5 
                         hover:shadow-lg
                     "
-                >
-                    Explore Espécies 🐠
-                </a>
-            </div>
-        </section>
-    )
+        >
+          Explore Espécies 🐠
+        </a>
+      </div>
+    </section>
+  );
 }
